@@ -1,10 +1,10 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <div id="app">
 <p>
-   
+    <p>{{contador}}</p>
+    <p>{{contador > 10 ? 'Maior que 10' : 'Menor que 10'}}</p>
     <button v-on:click="somar">Sommar 1</button>
-     <p>{{contador}}</p>
-     <p>{{contador > 10 ? 'Maior que 10' : 'Menor que 10'}}</p>
+  
   
 </p>
 </div>
