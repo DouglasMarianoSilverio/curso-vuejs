@@ -14,35 +14,43 @@
 
   <!-- 2) Crie duas classes CSS e associe a div usando a
     sintaxe de array -->
-  <div>Estou sem classe CSS :(</div>
+  <div :class="['azul','linha']">
+    Estou sem classe CSS :(
+    </div>
 
   <!-- 3) Deixe o usuário informar o nome da classe (crie classe CSS
     de exemplo) e associe a div abaixo. -->
   <div>
-    <input type="text">
-    <div></div>
+    <input type="text" v-model="classeCSS">
+    <div :class="classeCSS">
+      
+    </div>
   </div>
 
   <!-- 4) Let the user enter a class and enter 
     true/false for another class (create some example classes) 
     and attach the classes -->
   <div>
-    <input type="text">
-    <input type="text">
-    <div></div>
+    Classe: <input type="text" v-model="classeCSS2">
+    Aplicar .linha:<input type="text" v-model="aplicarLinha">
+    <div :class=[classeCSS2,{linha:aplicarLinha}]></div>
   </div>
 
   <!-- 5) Repita 3) mas utilizando estilos ao invés de classes CSS.
     Associe os estilos a div abaixo  -->
   <div>
-    <input type="text">
-    <div></div>
+    COr:<input type="text" v-model="cor">
+    <div style="height: 100px; width: 100px;" :style="{backgroundColor:cor}"></div>
   </div>
 
   <!-- 6) Create a simple progress bar with setInterval and style bindings. Start it by hitting the below button. -->
   <div>
     <button v-on:click="startProgress">Start Progress</button>
-    <div></div>
+    <div class="progresso">
+     <div class="barra" :style="{width}">
+    
+     </div> 
+    </div>
   </div>
 </div>
 <script src="app.js"></script>
