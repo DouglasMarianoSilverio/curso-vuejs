@@ -19,50 +19,63 @@
             <div class="row">
 
 
-                <div class="col-6 texto-center" >
+                <div class="col-md-6 texto-center">
 
 
                     <h1>Jogador</h1>
 
-                    <div class="progresso">
+                    <!-- <div class="progresso">
                         <div class="barra" :style="{width:energiaJogador}">
 
                         </div>
-                    </div>
+                    </div> -->
+                    <div class="progress">
+
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" :style="{width:energiaJogador}" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>                    
                     {{energiaJogador}}
                 </div>
-                <div class="col-6 texto-center">
+                <div class="col-md-6 texto-center">
 
 
                     <h1>Monstro</h1>
 
-                    <div class="progresso">
+                    <!-- <div class="progresso">
                         <div class="barra"  :style="{width:energiaMostro}"  >
 
 
                         </div>
                         
+                    </div> -->
+                    <div class="progress">
+
+                        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" :style="{width:energiaMostro}" aria-valuenow="25"
+                            aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                     {{energiaMostro}}
                 </div>
-            </div>
-            <hr>
-            <div class="row">
-                <div class="col"></div>
-                <div class="col-6">
 
-                    <button type="button" class="btn btn-danger" @click="Ataque"  >Ataque</button>
-                    
-                    <button type="button" class="btn btn-warning" @click="AtaqueEspecial">Ataque Especial</button>
-                    
-                    <button type="button" class="btn btn-success" @click="Curar">Curar</button>
-                    
-                    <button type="button" class="btn btn-secondary">Desistir</button>
-                </div>
-                <div class="col"></div>
-                
             </div>
         </div>
+        <hr>
+        <div class="row">
+
+            <div class="col-md-4"></div>
+            <div class="col-md-4 d-flex justify-content-around ">
+
+                <button type="button" class="btn btn-danger" @click="Ataque">Ataque</button>
+
+                <button type="button" class="btn btn-warning" @click="AtaqueEspecial">Ataque Especial</button>
+
+                <button type="button" class="btn btn-success" @click="Curar">Curar</button>
+
+                <button type="button" class="btn btn-secondary">Desistir</button>
+            </div>
+
+
+        </div>
+    </div>
     </div>
     <footer>
 
