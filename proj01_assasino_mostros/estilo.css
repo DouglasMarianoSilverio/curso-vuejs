@@ -24,3 +24,11 @@
 {
   justify-content: space-around;
 }
+
+#IniciarJogo,#Mensagem
+{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+}
